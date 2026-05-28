@@ -31,12 +31,12 @@ const featuredOrder = [
 ];
 
 const skills = {
-  Backend: ["Python", "FastAPI", "Django", "REST APIs", "PostgreSQL"],
-  Frontend: ["React", "TypeScript", "Vue", "Tailwind CSS", "Vite"],
-  Tools: ["Git", "GitHub", "Docker", "Node.js", "PHP / Twig"],
+  Backend: ["Python",  "Django"],
+  Frontend: ["React", "TypeScript",  "Tailwind CSS", "Vite"],
+  Tools: ["Git", "GitHub",  "Node.js"],
 };
 
-const roles = ["Python Developer", "React Engineer", "Frontend Builder", "Full-Stack Tinkerer"];
+const roles = ["Python Developer", "React developer", "Frontend Builder"];
 
 const Index = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
@@ -80,7 +80,7 @@ const Index = () => {
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
         <div className="container flex h-16 items-center justify-between">
           <a href="#top" className="font-mono text-lg font-bold gradient-text">
-            &lt;pironoid /&gt;
+            &lt;Peter&gt;
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</a>
@@ -105,8 +105,8 @@ const Index = () => {
             <Sparkles className="mr-1 h-3 w-3" /> Available for work
           </Badge>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl">
-            Hi, I'm <span className="gradient-text">pironoid</span>.
-            <br />I build with{" "}
+            Hi, I'm <span className="gradient-text">Peter</span>.
+            <br />I am a{" "}
             <span className="font-mono text-primary text-glow">
               {typed}
               <span className="animate-pulse">_</span>
@@ -247,7 +247,7 @@ const Index = () => {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <a href="mailto:hello@example.com">
+                <a href="mailto:emiejeoghenekaro@gmail.com">
                   <Mail /> Email me
                 </a>
               </Button>
@@ -258,7 +258,7 @@ const Index = () => {
 
       <footer className="border-t border-border">
         <div className="container py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p className="font-mono">© {new Date().getFullYear()} pironoid14</p>
+          <p className="font-mono">© {new Date().getFullYear()} Peter</p>
           <p className="font-mono">Built with React + Tailwind</p>
         </div>
       </footer>

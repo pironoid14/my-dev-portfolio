@@ -99,3 +99,6 @@
     border-color: hsl(var(--primary) / 0.5);
   }
 }
+#lovable-badge {
+  display: none !important;
+}
