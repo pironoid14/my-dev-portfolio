@@ -247,9 +247,7 @@ const Index = () => {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <a href="mailto:emiejeoghenekaro@gmail.com">
-                  <Mail /> Email me
-                </a>
+                <a href="mailto:emiejeoghenekaro@gmail.com"><Mail />Email me</a>
               </Button>
             </div>
           </div>
