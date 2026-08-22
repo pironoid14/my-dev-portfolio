@@ -18,6 +18,7 @@ type Repo = {
 };
 
 const featuredOrder = [
+  "Aquatrace",
   "Ticket-Generator",
   "HNG-QR-Menu-Card-Public",
   "Authenticator-app",
@@ -31,9 +32,9 @@ const featuredOrder = [
 ];
 
 const skills = {
-  Backend: ["Python",  "Django"],
-  Frontend: ["React", "TypeScript",  "Tailwind CSS", "Vite"],
-  Tools: ["Git", "GitHub",  "Node.js"],
+  Backend: ["Python", "Django"],
+  Frontend: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+  Tools: ["Git", "GitHub", "Node.js"],
 };
 
 const roles = ["Python Developer", "React developer", "Frontend Builder"];
@@ -49,13 +50,16 @@ const Index = () => {
       .then((data: Repo[]) => {
         if (!Array.isArray(data)) return;
         const filtered = data.filter((r) => !r.fork);
+        // Get explicitly featured repos
         const featured = featuredOrder
           .map((n) => filtered.find((r) => r.name === n))
           .filter(Boolean) as Repo[];
+        // Get any other newly updated repos that aren't in featuredOrder
         const rest = filtered.filter((r) => !featuredOrder.includes(r.name));
-        setRepos([...featured, ...rest].slice(0, 9));
+        // Place featured repos first, then any newly pushed/created repos, up to 15 repos total
+        setRepos([...featured, ...rest].slice(0, 20));
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   useEffect(() => {
